@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function  Humens() {
+        this.foot=2;
+    }
+    Humens.prototype.getFoot=function () {
+        return this.foot;
+    }
+    function Man() {
+        this.hade=1;
+    }
+    Man.prototype=new Humens();
+    Man.prototype.getHead=function () {
+        return this.head;
+    }
+    var man1=new Man();
+    alert(man1.foot);
+</script>
+</body>
+</html>
